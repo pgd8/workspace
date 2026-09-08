@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:workspace/Core/navigation/routes.dart';
 import 'package:workspace/Core/shared/app_logo.dart';
 import 'package:workspace/Core/style/colors_manager.dart';
 import 'package:workspace/Core/style/text_styles.dart';
@@ -11,6 +13,12 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
+  @override
+  void initState() {
+    routeToOnboarding();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,5 +37,11 @@ class _SplashViewState extends State<SplashView> {
         ),
       ),
     );
+  }
+
+  void routeToOnboarding() {
+    Future.delayed(Duration(seconds: 3), () {
+      context.pushReplacement(Routes.kOnboardingView);
+    });
   }
 }

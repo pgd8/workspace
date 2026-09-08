@@ -2,6 +2,7 @@ import 'dart:ui';
 
 class ColorsManager {
   static Color whiteColor = Color(0xffFFFFFF);
+  static Color blackColor = Color(0xff000000);
   //brand
   static Color brandPrimaryLightColor = Color(0xff24A19C);
   static Color brandPrimaryDarckColor = Color(0xff11594B);
@@ -41,4 +42,7 @@ class ColorsManager {
   static const Color errorFocusedColor = Color(0xFFF0C4CC);
   static const Color errorPressedColor = Color(0xFFB2324A);
   static const Color errorOutlineColor = Color(0xFFFFA3B4);
+
+  //dots color
+  static const Color dotsColor = Color(0xffCBF1F0);
 }

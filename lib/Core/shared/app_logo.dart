@@ -11,8 +11,8 @@ class AppLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width ?? 120,
-      height: height ?? 120,
+      width: width ?? 150,
+      height: height ?? 150,
       decoration: BoxDecoration(
         color: ColorsManager.whiteColor,
         borderRadius: .circular(12),
