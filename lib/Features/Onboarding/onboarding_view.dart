@@ -3,8 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:workspace/Core/Utils/units.dart';
 import 'package:workspace/Core/navigation/routes.dart';
-import 'package:workspace/Core/shared/custom_main_button.dart';
-import 'package:workspace/Core/shared/custom_text_button.dart';
+import 'package:workspace/Core/shared/widgets/custom_main_button.dart';
+import 'package:workspace/Core/shared/widgets/custom_text_button.dart';
 import 'package:workspace/Core/style/assets_manager.dart';
 import 'package:workspace/Core/style/colors_manager.dart';
 import 'package:workspace/Features/Onboarding/widgets/custom_tab.dart';
@@ -39,11 +39,14 @@ class _OnboardingViewState extends State<OnboardingView> {
         bottom: true,
         child: Padding(
           padding: .only(
-            top: Units.getHeight(context: context, widgetheight: 68),
+            top: Units.getHeight(context: context, widgetheight: 50),
           ),
           child: Container(
             padding: .symmetric(
-              horizontal: Units.getHeight(context: context, widgetheight: 24),
+              horizontal: Units.getHorizontalPadding(
+                context: context,
+                padding: 24,
+              ),
             ),
             child: Column(
               crossAxisAlignment: .stretch,

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:workspace/Core/Utils/units.dart';
 import 'package:workspace/Core/navigation/routes.dart';
-import 'package:workspace/Core/shared/custom_main_button.dart';
-import 'package:workspace/Core/shared/text_input_field.dart';
+import 'package:workspace/Core/shared/widgets/custom_main_button.dart';
+import 'package:workspace/Core/shared/widgets/text_input_field.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});

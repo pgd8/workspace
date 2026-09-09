@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:workspace/Core/navigation/routes.dart';
-import 'package:workspace/Core/shared/app_logo.dart';
+import 'package:workspace/Core/shared/widgets/app_logo.dart';
 import 'package:workspace/Core/style/colors_manager.dart';
 import 'package:workspace/Core/style/text_styles.dart';
 

@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:workspace/Core/Utils/units.dart';
 import 'package:workspace/Core/navigation/routes.dart';
-import 'package:workspace/Core/shared/custom_main_button.dart';
+import 'package:workspace/Core/shared/widgets/custom_main_button.dart';
 import 'package:workspace/Core/style/assets_manager.dart';
 import 'package:workspace/Core/style/colors_manager.dart';
 import 'package:workspace/Core/style/text_styles.dart';
@@ -17,7 +17,7 @@ class WelcomeView extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: .only(
-          top: Units.getHeight(context: context, widgetheight: 76),
+          top: Units.getHeight(context: context, widgetheight: 60),
           bottom: Units.getHeight(context: context, widgetheight: 50),
         ),
         child: Container(
