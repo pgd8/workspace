@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:workspace/Core/navigation/routes.dart';
+import 'package:workspace/Features/Login/login_view.dart';
 import 'package:workspace/Features/Onboarding/onboarding_view.dart';
 import 'package:workspace/Features/Splash/splash_view.dart';
 import 'package:workspace/Features/Welcome/welcome_view.dart';
@@ -22,6 +23,11 @@ class AppRouter {
      GoRoute(
       path: Routes.kWelcomeView,
       builder: (context, state) => WelcomeView(),
+    ),
+    //login view
+    GoRoute(
+      path: Routes.kLoginView,
+      builder: (context, state) => LoginView(),
     ),
   ];
 }

@@ -41,58 +41,61 @@ class _OnboardingViewState extends State<OnboardingView> {
           padding: .only(
             top: Units.getHeight(context: context, widgetheight: 68),
           ),
-          child: Column(
-            crossAxisAlignment: .stretch,
-            children: [
-              Container(
-                alignment: .topEnd,
-                child: CustomTextButton(
-                  onPressed: () {
-                    context.pushReplacement(Routes.kWelcomeView);
-                  },
-                  btnTitle: 'Skip',
-                ),
-              ),
-              SizedBox(
-                height: Units.getHeight(context: context, widgetheight: 30),
-              ),
-              SizedBox(
-                height: Units.getHeight(context: context, widgetheight: 466),
-                child: PageView(
-                  controller: _controller,
-                  allowImplicitScrolling: false,
-                  physics: NeverScrollableScrollPhysics(),
-                  children: _buildTabs(),
-                ),
-              ),
-              SizedBox(
-                height: Units.getHeight(context: context, widgetheight: 32),
-              ),
-              Center(
-                child: SmoothPageIndicator(
-                  controller: _controller,
-                  count: 2,
-                  effect: ExpandingDotsEffect(
-                    activeDotColor: ColorsManager.brandPrimaryLightColor,
-                    dotColor: ColorsManager.dotsColor,
-                    dotHeight: Units.getHeight(
-                      context: context,
-                      widgetheight: 8,
-                    ),
-                    dotWidth: Units.getWidth(context: context, widgetWidth: 8),
+          child: Container(
+            padding: .symmetric(horizontal: Units.getHeight(context: context, widgetheight: 24)),
+            child: Column(
+              crossAxisAlignment: .stretch,
+              children: [
+                Container(
+                  alignment: .topEnd,
+                  child: CustomTextButton(
+                    onPressed: () {
+                      context.pushReplacement(Routes.kWelcomeView);
+                    },
+                    btnTitle: 'Skip',
                   ),
                 ),
-              ),
-              SizedBox(
-                height: Units.getHeight(context: context, widgetheight: 86),
-              ),
-              CustomMainButton(
-                btnTitle: 'Continue',
-                onPressed: () {
-                  animateToNextPage();
-                },
-              ),
-            ],
+                SizedBox(
+                  height: Units.getHeight(context: context, widgetheight: 30),
+                ),
+                SizedBox(
+                  height: Units.getHeight(context: context, widgetheight: 466),
+                  child: PageView(
+                    controller: _controller,
+                    allowImplicitScrolling: false,
+                    physics: NeverScrollableScrollPhysics(),
+                    children: _buildTabs(),
+                  ),
+                ),
+                SizedBox(
+                  height: Units.getHeight(context: context, widgetheight: 32),
+                ),
+                Center(
+                  child: SmoothPageIndicator(
+                    controller: _controller,
+                    count: 2,
+                    effect: ExpandingDotsEffect(
+                      activeDotColor: ColorsManager.brandPrimaryLightColor,
+                      dotColor: ColorsManager.dotsColor,
+                      dotHeight: Units.getHeight(
+                        context: context,
+                        widgetheight: 8,
+                      ),
+                      dotWidth: Units.getWidth(context: context, widgetWidth: 8),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: Units.getHeight(context: context, widgetheight: 86),
+                ),
+                CustomMainButton(
+                  btnTitle: 'Continue',
+                  onPressed: () {
+                    animateToNextPage();
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),

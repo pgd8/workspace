@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:workspace/Core/Utils/units.dart';
+import 'package:workspace/Core/navigation/routes.dart';
 import 'package:workspace/Core/shared/custom_main_button.dart';
 import 'package:workspace/Core/style/assets_manager.dart';
 import 'package:workspace/Core/style/colors_manager.dart';
@@ -53,6 +55,7 @@ class WelcomeView extends StatelessWidget {
               CustomMainButton(
                 btnTitle: '',
                 customContent: Row(
+                  spacing: Units.getWidth(context: context, widgetWidth: 10),
                   mainAxisAlignment: .center,
                   children: [
                     SvgPicture.asset(AssetsManager.messageIcon),
@@ -62,7 +65,9 @@ class WelcomeView extends StatelessWidget {
                     ),
                   ],
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  context.pushReplacement(Routes.kLoginView);
+                },
               ),
               SizedBox(
                 height: Units.getHeight(context: context, widgetheight: 16),
@@ -78,31 +83,52 @@ class WelcomeView extends StatelessWidget {
                   Expanded(child: Divider()),
                 ],
               ),
-
+              SizedBox(
+                height: Units.getHeight(context: context, widgetheight: 23),
+              ),
               Row(
+                spacing: Units.getWidth(context: context, widgetWidth: 10),
                 children: [
                   CustomMainButton(
                     btnTitle: '',
-                    btnColor: ColorsManager.neutralGhostColor,
+                    btnColor: ColorsManager.neutralBackgroundColor,
                     width: 155,
                     customContent: Row(
                       mainAxisAlignment: .center,
+                      spacing: Units.getWidth(
+                        context: context,
+                        widgetWidth: 10,
+                      ),
                       children: [
-                        SvgPicture.asset(AssetsManager.messageIcon),
-                        Text('Facebook', style: TextStyles.textStyleWhiteM18),
+                        SvgPicture.asset(AssetsManager.facebookIcon),
+                        Text(
+                          'Facebook',
+                          style: TextStyles.textStyleWhiteM18.copyWith(
+                            color: ColorsManager.blackColor,
+                          ),
+                        ),
                       ],
                     ),
                     onPressed: () {},
                   ),
                   CustomMainButton(
                     btnTitle: '',
-                    btnColor: ColorsManager.neutralGhostColor,
+                    btnColor: ColorsManager.neutralBackgroundColor,
                     width: 155,
                     customContent: Row(
                       mainAxisAlignment: .center,
+                      spacing: Units.getWidth(
+                        context: context,
+                        widgetWidth: 10,
+                      ),
                       children: [
-                        SvgPicture.asset(AssetsManager.messageIcon),
-                        Text('Google', style: TextStyles.textStyleWhiteM18),
+                        SvgPicture.asset(AssetsManager.googleIcon),
+                        Text(
+                          'Google',
+                          style: TextStyles.textStyleWhiteM18.copyWith(
+                            color: ColorsManager.blackColor,
+                          ),
+                        ),
                       ],
                     ),
                     onPressed: () {},

@@ -5,8 +5,8 @@ class ColorsManager {
   static Color blackColor = Color(0xff000000);
   //brand
   static Color brandPrimaryLightColor = Color(0xff24A19C);
-  static Color brandPrimaryDarckColor = Color(0xff11594B);
-  static Color brandPrimaytColor = Color(0xff1C967E);
+  static Color brandPrimaryDarkColor = Color(0xff11594B);
+  static Color brandPrimaryColor = Color(0xff1C967E);
   static Color brandPrimaryBackgroundColor = Color(0xffF2F9F9);
   static Color brandPrimaryFocusedColor = Color(0xff9ED2D0);
   static Color brandPrimaryPressedColor = Color(0xff064F4C);
