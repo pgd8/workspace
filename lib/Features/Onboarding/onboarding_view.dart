@@ -42,7 +42,9 @@ class _OnboardingViewState extends State<OnboardingView> {
             top: Units.getHeight(context: context, widgetheight: 68),
           ),
           child: Container(
-            padding: .symmetric(horizontal: Units.getHeight(context: context, widgetheight: 24)),
+            padding: .symmetric(
+              horizontal: Units.getHeight(context: context, widgetheight: 24),
+            ),
             child: Column(
               crossAxisAlignment: .stretch,
               children: [
@@ -59,7 +61,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                   height: Units.getHeight(context: context, widgetheight: 30),
                 ),
                 SizedBox(
-                  height: Units.getHeight(context: context, widgetheight: 466),
+                  height: Units.getHeight(context: context, widgetheight: 470),
                   child: PageView(
                     controller: _controller,
                     allowImplicitScrolling: false,
@@ -81,7 +83,10 @@ class _OnboardingViewState extends State<OnboardingView> {
                         context: context,
                         widgetheight: 8,
                       ),
-                      dotWidth: Units.getWidth(context: context, widgetWidth: 8),
+                      dotWidth: Units.getWidth(
+                        context: context,
+                        widgetWidth: 8,
+                      ),
                     ),
                   ),
                 ),

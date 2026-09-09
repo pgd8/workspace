@@ -39,7 +39,7 @@ class CustomTab extends StatelessWidget {
             ),
             Text(
               title,
-              style: TextStyles.textStyleBlackSB26,
+              style: TextStyles.textStyleBlackSB26(context),
               textAlign: .center,
             ),
           ],
@@ -47,7 +47,7 @@ class CustomTab extends StatelessWidget {
         Text(
           description,
           textAlign: .center,
-          style: TextStyles.textStyleNeutralSecondaryR14,
+          style: TextStyles.textStyleNeutralSecondaryR14(context),
         ),
       ],
     );

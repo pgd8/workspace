@@ -4,15 +4,16 @@ import 'package:workspace/Core/Utils/units.dart';
 import 'package:workspace/Core/navigation/routes.dart';
 import 'package:workspace/Core/shared/custom_main_button.dart';
 import 'package:workspace/Core/shared/text_input_field.dart';
+import 'package:workspace/Core/style/text_styles.dart';
 
-class LoginForm extends StatefulWidget {
-  const LoginForm({super.key});
+class SignupForm extends StatefulWidget {
+  const SignupForm({super.key});
 
   @override
-  State<LoginForm> createState() => _LoginFormState();
+  State<SignupForm> createState() => _SignupFormState();
 }
 
-class _LoginFormState extends State<LoginForm> {
+class _SignupFormState extends State<SignupForm> {
   late TextEditingController _emailController;
   late TextEditingController _passwordController;
   final _formKey = GlobalKey<FormState>();
@@ -39,18 +40,12 @@ class _LoginFormState extends State<LoginForm> {
         crossAxisAlignment: .start,
         spacing: Units.getHorizontalPadding(context: context, padding: 10),
         children: [
-          const Text(
-            'Email Address',
-            style: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w600,
-              color: Colors.black,
-            ),
-          ),
+          Text('Email Address', style: TextStyles.textStyleBlackM16(context)),
           TextInputField(
             hintText: 'name@example.com',
             controller: _emailController,
           ),
+          Text('Password', style: TextStyles.textStyleBlackM16(context)),
           TextInputField(
             hintText: 'Enter your password',
             controller: _passwordController,
@@ -58,7 +53,7 @@ class _LoginFormState extends State<LoginForm> {
           ),
           const Spacer(),
           CustomMainButton(
-            btnTitle: 'Login',
+            btnTitle: 'Signup',
             onPressed: () {
               context.go(Routes.kHomeView);
             },

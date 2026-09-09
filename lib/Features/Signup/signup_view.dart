@@ -2,13 +2,13 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:workspace/Core/Utils/units.dart';
-import 'package:workspace/Core/forms/login_form.dart';
+import 'package:workspace/Core/forms/signup_form.dart';
 import 'package:workspace/Core/navigation/routes.dart';
 import 'package:workspace/Core/style/colors_manager.dart';
 import 'package:workspace/Core/style/text_styles.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class SignupView extends StatelessWidget {
+  const SignupView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class LoginView extends StatelessWidget {
           children: [
             const SizedBox(height: 40),
             Text(
-              'Welcome Back!',
+              'Create account',
               textAlign: TextAlign.center,
               style: TextStyles.textStyleBlackSB24(context),
             ),
@@ -31,7 +31,7 @@ class LoginView extends StatelessWidget {
               height: Units.getVerticalPadding(context: context, padding: 8),
             ),
             const Text(
-              'Your work faster and structured with Workspace',
+              'Create your account and feel the benefits',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 14, color: Colors.grey),
             ),
@@ -39,7 +39,7 @@ class LoginView extends StatelessWidget {
               height: Units.getVerticalPadding(context: context, padding: 40),
             ),
 
-            Expanded(child: LoginForm()),
+            Expanded(child: SignupForm()),
             SizedBox(
               height: Units.getVerticalPadding(context: context, padding: 24),
             ),
@@ -48,14 +48,14 @@ class LoginView extends StatelessWidget {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: 'Don\'n Have Account?',
+                      text: 'Already Have Account?',
                       style: TextStyles.textStyleNeutralSecondaryR12(context),
                     ),
                     TextSpan(
-                      text: ' Signup',
+                      text: ' Login',
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
-                          context.push(Routes.kSignupView);
+                          context.go(Routes.kLoginView);
                         },
                       style: TextStyles.textStyleNeutralSecondaryR12(
                         context,

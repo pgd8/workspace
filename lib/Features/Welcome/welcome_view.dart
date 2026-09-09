@@ -31,13 +31,13 @@ class WelcomeView extends StatelessWidget {
                   children: [
                     TextSpan(
                       text: 'Welcome To ',
-                      style: TextStyles.textStyleBlackSB26,
+                      style: TextStyles.textStyleBlackSB26(context),
                     ),
                     TextSpan(
                       text: 'Workspace',
-                      style: TextStyles.textStyleBlackSB26.copyWith(
-                        color: ColorsManager.brandPrimaryLightColor,
-                      ),
+                      style: TextStyles.textStyleBlackSB26(
+                        context,
+                      ).copyWith(color: ColorsManager.brandPrimaryLightColor),
                     ),
                   ],
                 ),
@@ -61,7 +61,7 @@ class WelcomeView extends StatelessWidget {
                     SvgPicture.asset(AssetsManager.messageIcon),
                     Text(
                       'Continue with Email',
-                      style: TextStyles.textStyleWhiteM18,
+                      style: TextStyles.textStyleWhiteM18(context),
                     ),
                   ],
                 ),
@@ -78,7 +78,7 @@ class WelcomeView extends StatelessWidget {
                   Expanded(child: Divider()),
                   Text(
                     'Or Continue With',
-                    style: TextStyles.textStyleNeutralSecondaryR12,
+                    style: TextStyles.textStyleNeutralSecondaryR12(context),
                   ),
                   Expanded(child: Divider()),
                 ],
@@ -103,9 +103,9 @@ class WelcomeView extends StatelessWidget {
                         SvgPicture.asset(AssetsManager.facebookIcon),
                         Text(
                           'Facebook',
-                          style: TextStyles.textStyleWhiteM18.copyWith(
-                            color: ColorsManager.blackColor,
-                          ),
+                          style: TextStyles.textStyleWhiteM18(
+                            context,
+                          ).copyWith(color: ColorsManager.blackColor),
                         ),
                       ],
                     ),
@@ -125,9 +125,9 @@ class WelcomeView extends StatelessWidget {
                         SvgPicture.asset(AssetsManager.googleIcon),
                         Text(
                           'Google',
-                          style: TextStyles.textStyleWhiteM18.copyWith(
-                            color: ColorsManager.blackColor,
-                          ),
+                          style: TextStyles.textStyleWhiteM18(
+                            context,
+                          ).copyWith(color: ColorsManager.blackColor),
                         ),
                       ],
                     ),

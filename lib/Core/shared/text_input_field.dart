@@ -42,19 +42,33 @@ class _TextInputFieldState extends State<TextInputField> {
       obscureText: _obSecureText,
       decoration: InputDecoration(
         suffixIcon: widget.isPassword == true
-            ? GestureDetector(
-                onTap: () {
-                  setState(() {
-                    _obSecureText = !_obSecureText;
-                  });
-                },
-                child: SvgPicture.asset(
-                  _obSecureText
-                      ? AssetsManager.eyeOutlinedIcon
-                      : AssetsManager.eyeOffOutlinedIcon,
+            ? Padding(
+                padding: .symmetric(
+                  horizontal: Units.getHorizontalPadding(
+                    context: context,
+                    padding: 17,
+                  ),
+                ),
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _obSecureText = !_obSecureText;
+                    });
+                  },
+                  child: SvgPicture.asset(
+                    _obSecureText
+                        ? AssetsManager.eyeOutlinedIcon
+                        : AssetsManager.eyeOffOutlinedIcon,
+                    height: Units.getHeight(context: context, widgetheight: 24),
+                    width: Units.getWidth(context: context, widgetWidth: 24),
+                  ),
                 ),
               )
             : SizedBox.shrink(),
+
+        suffixIconConstraints: BoxConstraints(
+          maxWidth: Units.getWidth(context: context, widgetWidth: 50),
+        ),
         hintText: widget.hintText,
         hintStyle: TextStyle(
           color: widget.hintTextColor ?? ColorsManager.neutralGhostColor,
@@ -82,7 +96,7 @@ class _TextInputFieldState extends State<TextInputField> {
             Units.getRadius(context: context, radius: 12),
           ),
           borderSide: BorderSide(
-            color: ColorsManager.brandPrimaryLightColor,
+            color: ColorsManager.neutralLineColor,
             width: 1,
           ),
         ),

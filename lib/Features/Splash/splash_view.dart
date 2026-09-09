@@ -31,7 +31,7 @@ class _SplashViewState extends State<SplashView> {
             AppLogo(),
             Text(
               'The best to do list application for you',
-              style: TextStyles.textStyleBrandPrimaryLightColorM18,
+              style: TextStyles.textStyleBrandPrimaryLightColorM18(context),
             ),
           ],
         ),
